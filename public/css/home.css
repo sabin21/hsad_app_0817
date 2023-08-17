@@ -1,0 +1,82 @@
+
+.home-hero-wrap{
+  @apply relative w-full max-w-[1760px] mx-auto px-[40px];
+  .home_1_1{ @apply w-[857px] pt-[180px] pb-[80px]; }
+  
+}
+.home-divide{
+  @apply relative block w-full h-2 border-t border-gray-300;
+}
+.home-1-hero{
+  >.inner {
+    @apply w-full pt-[80px] pb-[120px] flex flex-col;
+    .copy-1 {
+      @apply block w-full text-[22px] text-gray-400 font-bold mb-8;
+    }
+    .select-wrap{
+      @apply relative w-full flex flex-col;
+      .select-line{
+        @apply relative w-full flex ;
+        .btn-select{
+          @apply relative w-[400px] h-[120px] bg-gray-100 rounded-[100px] pr-[40px] pl-[60px]
+          flex justify-between transition-all overflow-hidden ;
+          .text-wrap{
+            @apply absolute w-full h-[360px] left-0 flex flex-col ;
+            .text{ 
+              @apply relative text-[58px] text-gray-400 font-extrabold left-[50px] text-left
+              h-[120px] flex items-center ;
+              animation:selectText 3s ;
+              animation-iteration-count: infinite ;
+            }
+          }
+          .home-select-icon {
+            @apply w-[40px] h-[40px] absolute right-[44px] top-[38px];
+            /* animation:selectIcon 2s ;
+            animation-iteration-count: infinite ; */
+            /* animation-timing-function: 4s; */
+          }
+          &:hover {
+            @apply bg-[#E826C9] ;
+            .text{
+              @apply text-white ;
+            }
+            .home-select-icon{
+              path{
+                stroke:white;
+              }
+            }
+          }
+        }
+      }
+      .big-text {
+        @apply text-[90px] font-extrabold pl-[24px] pr-[24px];
+      }
+    }
+  }  
+}
+@keyframes selectIcon {
+  0%{transform:translateY(-3px) ;}
+  50%{transform:translateY(3px) ;}
+  100%{transform:translateY(-3px) ;}
+}
+@keyframes selectText{
+  0%{transform:translateY(0px) ;}
+  40%{transform:translateY(0px) ;}
+  50%{transform:translateY(-120px) ;}
+  90%{transform:translateY(-120px) ;}
+  100%{transform:translateY(-240px) ;}
+}
+/* @keyframes selectIcon {
+  0%{transform:translateY(-3px) rotateY(0deg) ;}
+  50%{transform:translateY(3px) rotateY(180deg) ;}
+  100%{transform:translateY(-3px) rotateY(360deg) ;}
+} */
+.home-con-wrap{
+  @apply relative w-full px-[24px];
+  >.dummy-img {
+    @apply pt-4 ; 
+  }
+}
+.home-2-hero-img {
+  @apply pt-[180px] pb-[70px] ;
+}

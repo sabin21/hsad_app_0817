@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+body{
+    font-family: 'Pretendard' ;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.page-wrap{
+    @apply relative w-full min-h-screen overflow-x-hidden ;
+}
+.header {
+    @apply w-full fixed z-[99999] h-[64px] lg:h-[88px] ;
+    .btn-burger-wrap{
+        @apply fixed w-[48px] h-[48px] right-[24px] lg:right-[32px] 
+        top-[8px] lg:top-[32px] cursor-pointer flex justify-center items-center border;
+        .btn-burger{
+            @apply relative w-[24px] h-[24px] lg:w-[36px] lg:h-[36px] m-auto top-0 bottom-0 ;
+            .burger-bar{
+                @apply block w-full h-[3px] transition-transform bg-black rounded-[2px];
+            }
+            &:before, &:after {
+                @apply content-[''] block absolute left-0 w-full h-[3px] transition-all
+                bg-[rgba(0,0,0,1)] origin-center rounded-[2px] ;
+            }
+            &:before { @apply top-[6px]; }
+            &:after { @apply top-[26px]; }
+            &.active{
+                .burger-bar{
+                    transform: scaleX(0);
+                }
+                &:before { top:18px; transform:rotate(45deg); }
+                &:after { top:18px; transform:rotate(-45deg); }
+            }
+        }
+        &:hover{
+            
+        }
+        
+    }    
+}
+.nav-wrap{
+    @apply fixed top-0 right-0 h-screen w-full bg-white flex ;
+    .nav-left-wrap{
+        @apply w-full lg:w-[50%] h-auto lg:h-screen bg-gray-200 ;
+    }
+    .nav-right-wrap {
+        @apply w-full lg:w-[50%] px-[10vw] lg:px-[4vw] ;
+    }
+    .nav-menu{
+        .menu-1-wrap{
+            .menu-1-item{
+                a{
+                    @apply text-[2vw] font-bold ; 
+                }
+            }
+        }
+        .menu-2-wrap{
+            .menu-2-item{
+                a{
+                    @apply text-[16px] lg:text-[20px] ;
+                }
+            }
+        }
+    }
+}
+
+.drop-menu-wrap{
+    @apply w-full md:w-[200px] min-h-[48px] border ;
+    .drop-menu {
+        @apply w-full ;
+        option {
+            @apply h-[40px];
+        }
+    }
+
+}

@@ -1,0 +1,1 @@
+(()=>{"use strict";document.getElementsByClassName("page__back"),window.onscroll=function(){var e;e=(document.body.scrollTop||document.documentElement.scrollTop)/5e3*10,document.getElementById("page-back").style.opacity=e}})();
