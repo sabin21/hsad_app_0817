@@ -22,3 +22,11 @@
     }
   }
 }
+
+.capa-list-hero-wrap{
+  @apply relative w-full h-[720px] bg-cover bg-center 
+  bg-[url('../../public/img/dummy/capa_hero.jpg')] ;
+  &:after {
+    @apply content-[''] block absolute w-full h-full left-0 top-0 ;
+  }
+}

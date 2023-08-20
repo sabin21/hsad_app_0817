@@ -2,57 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+@import './header.css';
 
 body{
   font-family: 'Pretendard' ;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+  font-weight:medium;
 }
 .page-wrap{
     @apply relative w-full min-h-screen overflow-x-hidden ;
 }
 
-//--------------------
-// Header
-
-.header{
-  @apply w-full h-[68px] lg:h-[104px] absolute z-[9999] pr-[24px] pl-[34px] 
-  flex items-center justify-between ;
-  .logo {
-    @apply block w-[64px] lg:w-[98px] ;
-  }
-  .header-right-wrap{
-    @apply flex items-center;
-    .btn-search, .btn-burger{
-      @apply relative w-[48px] h-[48px] mr-[18px];
-    }
-    .btn-vip{
-      @apply w-[182px] h-[56px] rounded-[30px] bg-[#E826C9];
-    }
-    .btn-burger{
-      @apply flex justify-center items-center ;
-      .inner{
-        @apply block relative w-[30px] h-[14px] ;
-        &:before, &:after {
-          @apply content-[''] block absolute left-0 w-full h-[3px] transition-all
-          bg-[rgba(0,0,0,1)] origin-center rounded-[2px] ;
-        }
-        &:before { @apply top-[0px]; }
-        &:after { @apply bottom-[0px]; }
-        &.active{
-            .burger-bar{
-                transform: scaleX(0);
-            }
-            &:before { top:18px; transform:rotate(45deg); }
-            &:after { top:18px; transform:rotate(-45deg);  }
-        }
-      }
-    }
-  }
-}
-
-//--------------------
+/*--------------------*/
 
 .breadcrumb-wrap{
   @apply w-full flex text-[14px] items-center mb-[32px] ;
@@ -72,7 +36,7 @@ body{
 // Footer
 
 .footer {
-  @apply relative w-full pt-6 pb-20 bg-slate-50 ;
+  @apply relative w-full pt-6 pb-20 ;
   .dummy-img {
     @apply relative w-[1450px] mx-auto;
   }
@@ -91,24 +55,118 @@ body{
   @apply font-medium text-gray-500 text-[14px] lg:text-[16px] ;
 }
 
-//--------------------
-// Layout Basic
+/*-------------------*/
 
 .container-wrap{
   @apply relative w-full max-w-[1498px] mx-auto px-[24px];
-  &.cards-list{
-    @apply flex flex-wrap justify-between ; 
+  &.max-width {
+    @apply max-w-full px-[100px] ;
+  }
+  &.cards-list{ @apply flex flex-wrap justify-between ; }
+  &.container-grid{
+    @apply grid  grid-cols-1 lg:grid-cols-12 gap-[24px] lg:gap-[38px] ;
+    >.col-1{ @apply col-span-1 ; }
+    >.col-2{ @apply col-span-2 ; }
+    >.col-3{ @apply col-span-3 ; }
+    >.col-4{ @apply col-span-4 ; }
+    >.col-5{ @apply col-span-5 ; }
+    >.col-6{ @apply col-span-6 ; }
+    >.col-7{ @apply col-span-7 ; }
+    >.col-8{ @apply col-span-8 ; }
+    >.col-9{ @apply col-span-9 ; }
+    >.col-10{ @apply col-span-10 ; }
   }
 }
 .full-wrap{
-  @apply relative w-full;
+  @apply relative w-full ;
+  .with-pict-wrap{
+    @apply relative w-full flex flex-col lg:flex-row mt-[200px];
+    &.to-right{
+      @apply justify-end;
+    }
+    .pict-wrap{
+      @apply relative min-w-[30%] min-h-[30vh] overflow-hidden top-0 left-0 
+      bg-slate-200 ;
+      >img { @apply w-full h-full object-cover object-center ; }
+      &.w-30 { @apply lg:w-[30%] ;}
+      &.w-40 { @apply lg:w-[40%] ;}
+      &.w-50 { @apply w-full lg:w-[50%] ;}
+      &.w-55 { @apply w-full lg:w-[55%] ;}
+      &.w-60 { @apply w-full lg:w-[60%] ;}
+      &.w-70 { @apply w-full lg:w-[70%] ;}
+      &.h-480 { @apply h-[400px] lg:h-[480px] ; }
+      &.h-540 { @apply h-[400px] lg:h-[540px] ; }
+      &.h-640 { @apply h-[400px] lg:h-[640px] ; }
+    }
+  }
 }
+
 .full-slide-wrap{
   @apply relative w-full h-full pl-[calc(50%-725px)] flex ;
   .slide{
     @apply relative shrink-0 mr-[24px] lg:mr-[38px];
   }
 }
+
+.page-divider {
+  @apply block relative w-full h-[1px] border-t border-gray-300 ;
+  &.dark {
+    @apply border-gray-700 ;
+  }
+}
+/*-------------------*/
+
+.page-head-wrap{
+  @apply pt-[140px] ;
+  .page-headline-wrap{
+    @apply relative w-full ;
+    .page-headline{
+      @apply font-bold tracking-tighter w-full max-w-[70%] leading-[1.2em] break-keep
+      mt-[120px] text-[32px] lg:text-[80px] ; 
+      &.small {
+        @apply lg:text-[64px] ;
+      }
+    }
+    .sub-title {
+      @apply block w-full font-bold text-gray-500 mt-[24px]
+      text-[20px] lg:text-[32px] ;
+    }
+  }
+}
+
+.page-headline-wrap{
+  .page-headline{
+    @apply font-bold text-gray-900 ;
+    &.big{
+      @apply text-[84px] ;    
+    }
+  }
+}
+/*-------------------*/
+
+.text-con-block {
+  @apply py-[24px] lg:py-[48px] w-full max-w-[620px] break-keep;
+  &.pl { @apply pl-[24px] lg:pl-[64px] ; }
+  &.pr { @apply pr-[24px] lg:pr-[64px] ; }
+  h4{
+    @apply font-bold leading-[1.2em] tracking-tight text-[24px] lg:text-[40px] ;
+    &.big{
+      @apply lg:text-[56px] ;
+    }
+  }
+  dl{ @apply mb-[48px] ;}
+  dt{ @apply font-bold text-gray-500  mt-8 mb-4 text-[20px] ; }
+  dd{ @apply text-gray-800  my-4 leading-[1.2em] text-[16px] lg:text-[18px] ; }
+  .desc{
+    @apply text-[16px] lg:text-[18px] mt-6 mb-10;
+    &.big {
+      @apply lg:text-[24px] text-gray-600 ;
+    }
+  }
+
+}
+
+/*-------------------*/
 
 .card-basic{
   @apply relative w-full flex flex-col ;
@@ -145,7 +203,7 @@ body{
 
 .content-wrap{
   @apply relative w-full max-w-[1450px] mx-auto break-keep ;
-  &.content__intro {
+  &.content__intro, &.page-head {
     @apply left-0 right-0 flex flex-col pt-[140px];
     .project__bp {
       @apply lg:text-[32px] text-gray-600 mt-[30vh] ;
@@ -207,7 +265,7 @@ body{
   @apply w-full relative pt-[194px] ;
 }
 .case-header{
-  @apply absolute z-[9999] w-full h-[90px] top-[68px] lg:top-[104px] 
+  @apply relative z-[9999] w-full h-[90px] 
   flex flex-row gap-8 border-b border-gray-300 px-[calc(50%-725px)] 
   bg-[rgba(255,255,255,0.8)] backdrop-blur-lg;
   &.case-header-top {
@@ -246,9 +304,10 @@ body{
   }
 }
 
-//----------------
+/*-----------------*/
+
 .insight-title{
-  @apply text-[64px] font-extrabold;
+  @apply text-[64px] font-bold tracking-tighter ;
 }
 .insight-title-2{
   @apply block relative text-[24px] font-medium text-gray-500 w-auto;
@@ -261,3 +320,17 @@ body{
   }  
 }
 
+/* dummy -------*/
+
+.contact-wrap {
+  @apply relative w-full max-w-[1202px] mx-auto ;
+  .contact-btns {
+    @apply mt-[150px] ;
+  }
+  .contact-con {
+    @apply mt-[150px] mb-[150px] cursor-pointer ;
+  }
+}
+#pict-area{
+  @apply bg-red-500 ;
+}

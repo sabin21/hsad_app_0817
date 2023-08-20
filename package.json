@@ -62,7 +62,8 @@
     "imagesloaded": "^5.0.0",
     "jquery": "^3.6.1",
     "lenis": "^0.0.2",
-    "swiper": "^8.1.4",
+    "lottie-web": "^5.12.2",
+    "swiper": "^10.2.0",
     "three": "^0.152.2"
   }
 }

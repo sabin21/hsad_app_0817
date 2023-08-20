@@ -52,6 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["imagesloaded", "npm:5.0.0"],\
             ["jquery", "npm:3.7.0"],\
             ["lenis", "npm:0.0.2"],\
+            ["lottie-web", "npm:5.12.2"],\
             ["mini-css-extract-plugin", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:2.7.6"],\
             ["postcss", "npm:8.4.28"],\
             ["postcss-import", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:14.1.0"],\
@@ -63,7 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sass", "npm:1.65.1"],\
             ["sass-loader", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:12.6.0"],\
             ["style-loader", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:3.3.3"],\
-            ["swiper", "npm:8.4.7"],\
+            ["swiper", "npm:10.2.0"],\
             ["tailwindcss", "npm:3.3.3"],\
             ["three", "npm:0.152.2"],\
             ["webpack", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:5.88.2"],\
@@ -5099,16 +5100,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["dom7", [\
-        ["npm:4.0.6", {\
-          "packageLocation": "./.yarn/cache/dom7-npm-4.0.6-3656a6d3f2-616a68cbae.zip/node_modules/dom7/",\
-          "packageDependencies": [\
-            ["dom7", "npm:4.0.6"],\
-            ["ssr-window", "npm:4.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["domelementtype", [\
         ["npm:2.3.0", {\
           "packageLocation": "./.yarn/cache/domelementtype-npm-2.3.0-02de7cbfba-ee837a318f.zip/node_modules/domelementtype/",\
@@ -6494,6 +6485,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["imagesloaded", "npm:5.0.0"],\
             ["jquery", "npm:3.7.0"],\
             ["lenis", "npm:0.0.2"],\
+            ["lottie-web", "npm:5.12.2"],\
             ["mini-css-extract-plugin", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:2.7.6"],\
             ["postcss", "npm:8.4.28"],\
             ["postcss-import", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:14.1.0"],\
@@ -6505,7 +6497,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sass", "npm:1.65.1"],\
             ["sass-loader", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:12.6.0"],\
             ["style-loader", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:3.3.3"],\
-            ["swiper", "npm:8.4.7"],\
+            ["swiper", "npm:10.2.0"],\
             ["tailwindcss", "npm:3.3.3"],\
             ["three", "npm:0.152.2"],\
             ["webpack", "virtual:1c794124a20cc93113cc3b962cf3c8bb7e0d9d7548fe5c6d428f204ab62c9ef70381c2e4797dcdd0721d5f619ab591981386312a9ad78591a07a63a6e8475928#npm:5.88.2"],\
@@ -7502,6 +7494,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash.uniq-npm-4.5.0-7c270dca85-a4779b57a8.zip/node_modules/lodash.uniq/",\
           "packageDependencies": [\
             ["lodash.uniq", "npm:4.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lottie-web", [\
+        ["npm:5.12.2", {\
+          "packageLocation": "./.yarn/cache/lottie-web-npm-5.12.2-942dc9e22a-af5bc3bc40.zip/node_modules/lottie-web/",\
+          "packageDependencies": [\
+            ["lottie-web", "npm:5.12.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -10734,15 +10735,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["ssr-window", [\
-        ["npm:4.0.2", {\
-          "packageLocation": "./.yarn/cache/ssr-window-npm-4.0.2-01f9c0151e-df18260092.zip/node_modules/ssr-window/",\
-          "packageDependencies": [\
-            ["ssr-window", "npm:4.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["ssri", [\
         ["npm:10.0.5", {\
           "packageLocation": "./.yarn/cache/ssri-npm-10.0.5-1a7557d04d-0a31b65f21.zip/node_modules/ssri/",\
@@ -11004,12 +10996,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["swiper", [\
-        ["npm:8.4.7", {\
-          "packageLocation": "./.yarn/unplugged/swiper-npm-8.4.7-9971804532/node_modules/swiper/",\
+        ["npm:10.2.0", {\
+          "packageLocation": "./.yarn/cache/swiper-npm-10.2.0-f03bf90787-b81fe81c72.zip/node_modules/swiper/",\
           "packageDependencies": [\
-            ["swiper", "npm:8.4.7"],\
-            ["dom7", "npm:4.0.6"],\
-            ["ssr-window", "npm:4.0.2"]\
+            ["swiper", "npm:10.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\

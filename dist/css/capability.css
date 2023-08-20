@@ -1,0 +1,12 @@
+
+
+.pp-hero-wrap{
+  @apply relative w-full mt-[300px];
+  .pp-hero-img {
+    @apply absolute w-full h-[820px] top-0 left-0 bg-center bg-cover;
+    &#pp-hero-1{ @apply bg-[url(../../public/img/capability/pp_pict_1_big.png)] ; }
+  }
+  .pp-content{
+    @apply relative w-full max-w-[1202px] mx-auto pt-[600px] ;
+  }
+}

@@ -1,0 +1,1 @@
+(()=>{"use strict";var e=document.querySelector(".home-img-2-1"),m=!0;e.addEventListener("click",(function(){e.src=m?"./img/dummy/home/home_2_1.png":"./img/dummy/home/home_2_2.png",m=!m}))})();

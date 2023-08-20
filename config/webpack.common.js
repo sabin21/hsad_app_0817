@@ -5,10 +5,13 @@ const webpack = require('webpack');
 const paths = require('./paths');
 // const TerserPlugin = require("terser-webpack-plugin");
 const pages = [
-  "draft_1_0","draft_2_0","draft_3_0","draft_3_1",
-  "home_1_1","home_2_1","home_2_2",
+  "home_1_1","home_1_2","home_1_3","home_2_1",
+  "capability_main",
   "case_list","case_view","insight_list","insight_list_2","insight_view",
   "works_list","works_view","contact",
+  "news_list",
+  "ir_announce",
+  "contact_1_1",
   "template_ui",
   "index","draft_list"
 ]
