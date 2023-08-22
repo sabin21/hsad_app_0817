@@ -10,10 +10,10 @@ body{
   font-family: 'Pretendard' ;
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-  font-weight:medium;
+  font-weight:medium; overflow-x:hidden;
 }
 .page-wrap{
-    @apply relative w-full min-h-screen overflow-x-hidden ;
+    @apply relative w-full min-h-screen overflow-x-hidden;
 }
 
 /*--------------------*/
@@ -265,10 +265,10 @@ body{
   @apply w-full relative pt-[194px] ;
 }
 .case-header{
-  @apply relative z-[9999] w-full h-[90px] 
+  @apply absolute z-[9999] w-full h-[90px] 
   flex flex-row gap-8 border-b border-gray-300 px-[calc(50%-725px)] 
-  bg-[rgba(255,255,255,0.8)] backdrop-blur-lg;
-  &.case-header-top {
+  bg-[rgba(255,255,255,0.8)] backdrop-blur-lg top-[104px];
+  &.active {
     @apply fixed top-0;
   }
   .case-header-item{
@@ -307,7 +307,10 @@ body{
 /*-----------------*/
 
 .insight-title{
-  @apply text-[64px] font-bold tracking-tighter ;
+  @apply text-[80px] font-bold tracking-tighter ;
+  &.sub {
+    @apply text-[32px] max-w-[900px] leading-[1.2em] text-gray-500 mb-[48px];
+  }
 }
 .insight-title-2{
   @apply block relative text-[24px] font-medium text-gray-500 w-auto;
@@ -333,4 +336,58 @@ body{
 }
 #pict-area{
   @apply bg-red-500 ;
+}
+
+.works-list-full{
+  @apply bg-cover bg-center h-[420px] flex items-center
+  bg-[url(../../public/img/capability/bp_jammy_hero_1.jpg)] mt-[120px] mb-[140px];
+  &:after {
+    @apply content-[''] block absolute w-full h-full left-0 top-0
+    bg-[rgba(0,0,0,0.3)] z-0;
+  }
+  h3{
+    @apply relative text-white font-bold text-[48px] w-[40%] leading-[1.2em] z-10;
+  }
+
+}
+/*-------------------*/
+
+.headline-wrap{  
+  @apply w-full mt-[64px];
+    >.headline-line{
+      @apply relative w-full flex overflow-hidden ;
+      &.big{
+        @apply block w-full ;
+        >h3{
+          @apply w-full block relative font-bold text-[32px] md:text-[56px] lg:text-[84px] my-0 py-0
+          leading-[1.15em] ;
+        }
+      }
+      >p{
+        @apply relative w-full max-w-[1000px] text-[32px] break-keep 
+        leading-[1.3em] text-gray-500 ;
+        
+      } 
+    }
+    &.reveal-text{
+      >.headline-line{
+        &.big{
+          >h3{
+            transform: translateY(100%); 
+            animation: headlineRevealUp 1s ; animation-fill-mode: forwards;
+            &:nth-child(2){
+              animation-delay:0.3s
+            }
+          }
+        }
+        >p{
+          transform: translateY(100%); animation: headlineRevealUp 1s ; 
+          animation-delay:1s; animation-fill-mode: forwards;
+        }
+    }
+  }
+}
+@keyframes headlineRevealUp {
+  0%{transform: translateY(100%) ;}
+  100%{transform: translateY(0%) ;}
 }

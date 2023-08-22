@@ -2,7 +2,7 @@
 /*-------------*/
 
 .header{
-  @apply w-full h-[68px] lg:h-[104px] absolute z-[9999] pr-[24px] pl-[34px] 
+  @apply w-full h-[68px] lg:h-[104px] absolute z-[9000] pr-[24px] pl-[34px] 
   flex items-center justify-between ;
   .logo {
     @apply block w-[64px] lg:w-[98px] ;

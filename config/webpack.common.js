@@ -3,12 +3,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack');
 const paths = require('./paths');
-// const TerserPlugin = require("terser-webpack-plugin");
+
 const pages = [
   "home_1_1","home_1_2","home_1_3","home_2_1",
-  "capability_main",
   "case_list","case_view","insight_list","insight_list_2","insight_view",
-  "works_list","works_view","contact",
+  "capability_list","painpoint","bp_jammy","contact",
+  "works_list","works_view","works_list_2",
   "news_list",
   "ir_announce",
   "contact_1_1",
@@ -21,14 +21,13 @@ module.exports = {
     config[page] = paths.src + `/${page}.js`;
     return config
   },{
-    app_common:paths.src + `/app_common.js`
+    app_common:paths.src + `/js/app_common.js`
   }),
   output: {
     path: paths.build,
     filename: '[name].bundle.js',
     publicPath: '/',
   },
-  // target: ["web", "es5"],
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
@@ -90,9 +89,4 @@ module.exports = {
       assets: paths.public,
     },
   },
-  //-----
-  // optimization: {
-  //   minimize: true,
-  //   minimizer: [new TerserPlugin()],
-  // },
 }

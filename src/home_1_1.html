@@ -78,9 +78,15 @@
     </div>
   </div>
 
-<main class="page-wrap">
+  <div class="popup-outer">
+    <div class="popup-wrap">
+      <img src="./img/dummy/home_select_popup.png" class="full-img">
+    </div>
+  </div>
 
-	<section class="home-hero-wrap full-h home-section-1">
+<main class="page-wrap home-page-wrap">
+
+	<section class="home-hero-wrap full-h" id="home-1-hero-1">
 		<div class="container-wrap">
 			<div class="hero-title-wrap">
 				<h2>무엇이 궁금하신가요?</h2>
@@ -93,25 +99,25 @@
 		<div class="hero-video-wrap">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<video muted loop paused src="./video/cm_01.mp4"></video>
+					<video muted loop paused playsinline="true" src="./video/cm_01.mp4"></video>
 				</div>
 				<div class="swiper-slide">
-					<video muted loop paused src="./video/cm_02.mp4"></video>
+					<video muted loop paused playsinline="true" src="./video/cm_02.mp4"></video>
 				</div>
 				<div class="swiper-slide">
-					<video muted loop paused src="./video/cm_03.mp4"></video>
+					<video muted loop paused playsinline="true" src="./video/cm_03.mp4"></video>
 				</div>
 				<div class="swiper-slide">
-					<video muted loop paused src="./video/cm_04.mp4"></video>
+					<video muted loop paused playsinline="true" src="./video/cm_04.mp4"></video>
 				</div>
 				<div class="swiper-slide">
-					<video muted loop paused src="./video/cm_05.mp4"></video>
+					<video muted loop paused playsinline="true" src="./video/cm_05.mp4"></video>
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<section class="home-hero-wrap home-1-hero home-section-2">
+	<section class="home-hero-wrap home-1-hero" id="home-1-hero-2">
 		<div class="inner">
 			<span class="copy-1">궁금하신 점을 빠르게 찾아볼 수 있어요.</span>
 			<span class="select-wrap">
@@ -145,8 +151,9 @@
 		</div>
 	</section>
 
+  <div class="home-wrap-con bg-white w-full relative">
 	<span class="home-divide"></span>
-  <div class="sorting-bar">
+  <div class="sorting-bar bg-white">
     <span class="sorting-left">
       <button class="btn-sorting active">최신순</button>
       <button class="btn-sorting">인기순</button>
@@ -264,12 +271,16 @@
       </a>
     </article>
   </div>
-</main>
+</div>
 
 <footer class="footer">
   <img src="./img/dummy/footer.png" class="dummy-img">
 </footer>
 
-<script defer src="./app_common.bundle.js"></script>
+</main>
+
+<script defer src="/app_common.bundle.js"></script>
+<script defer src="./js/app_common.bundle.js"></script>
+
 </body>
 </html>
