@@ -7,7 +7,7 @@ const paths = require('./paths');
 const pages = [
   "home_1_1","home_1_2","home_1_3","home_2_1",
   "case_list","case_view","insight_list","insight_list_2","insight_view",
-  "capability_list","painpoint","bp_jammy","contact",
+  "capability_list","painpoint_1","painpoint_2","painpoint_3","painpoint_4","bp_jammy","contact",
   "works_list","works_view","works_list_2",
   "news_list",
   "ir_announce",

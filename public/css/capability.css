@@ -22,18 +22,62 @@
 }
 
 .bp-hero-wrap{
-  @apply relative w-full h-[calc(100vh-200px)] min-h-[800px] bg-cover bg-center;
-  &#jammy-hero-01{ @apply bg-[url(../../public/img/capability/bp_jammy_hero_1.jpg)] h-screen ;}
+  @apply relative w-full h-screen min-h-[800px] bg-cover bg-center overflow-hidden bg-black; 
+  .background-wrap{
+    @apply absolute w-full h-full bg-center bg-cover;
+    animation: heroScaleLoop 14s infinite ;
+    &#jammy-hero-01{ @apply bg-[url(../../public/img/capability/bp_jammy_hero_1.jpg)] ;}
+  }
   &#jammy-hero-02{ @apply bg-[url(../../public/img/capability/bp_jammy_hero_2.jpg)] }
   &#jammy-hero-03{ @apply bg-[url(../../public/img/capability/bp_jammy_hero_3.jpg)] }
 
   .hero-title-wrap{
-    @apply absolute w-[80%] left-[7%] bottom-[12%] text-white ;
+    @apply absolute w-[80%] left-[7%] bottom-[12%] text-white z-10;
     h2{
-      @apply w-full font-bold text-[4vw] leading-[1.2em]; 
+      @apply w-full font-bold text-[4vw] leading-[1.2em] ;
+      transform:translateY(100%); 
+      animation: headlineRevealUp 1s ; animation-fill-mode: forwards;
+      animation-delay:0.5s;
+    }
+    .bp-client-text{
+      @apply text-white lg:text-2xl flex font-bold ;
+      .label-client {
+        @apply opacity-70 mr-3 mb-3;
+      }
+    }
+    .reveal-line{
+      @apply block relative overflow-hidden ;
     }
   }
+  &:first-child{
+    
+  }
+  .bp-hero-mask {
+    @apply block absolute h-full w-0 overflow-hidden;
+    &.active {
+      animation: revealLTR 1s ; animation-fill-mode: forwards;
+    }
+    
+    &:after{
+      @apply content-[''] block absolute w-full h-full left-0 top-0 ;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 82%,rgba(0,0,0,0.5) 100%);
+    }
+  }  
 }
+@keyframes bg-opacity{
+  0%{ opacity: 0; }
+  100%{ opacity: 1; }
+}
+@keyframes revealLTR{
+  0%{ width: 0% }
+  100%{ width:100% }
+}
+@keyframes heroScaleLoop {
+  0%{ transform: scale(1.0) ;}
+  50%{ transform: scale(1.1);}
+  0%{ transform: scale(1.0) ;}
+}
+
 .bp-content-wrap{
   @apply max-w-[1202px] ;
 }
@@ -47,6 +91,17 @@
 /*-----------------*/
 
 .bp-article-wrap{
-  @apply fixed w-full h-screen top-0 z-[99999] bg-white overflow-y-scroll right-[-100%] transition-[right];
+  @apply fixed w-full h-screen top-0 z-[9000] bg-white overflow-y-scroll  
+  transition-[right] 
+  right-[-100%] duration-1000 ;
+  &.active { @apply right-0; }
 
+  .bp-work-wrap{
+    @apply py-[150px] ;
+  }
+}
+
+@keyframes headlineRevealUp {
+  0%{transform: translateY(100%) ;}
+  100%{transform: translateY(0%) ;}
 }

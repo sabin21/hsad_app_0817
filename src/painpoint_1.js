@@ -94,26 +94,28 @@ class StickyNavigation {
 		}
 		// $('.et-hero-tab-slider').css('width', width);
 		// $('.et-hero-tab-slider').css('left', left);
-	}
-	
+	}	
 }
 
-new StickyNavigation();
+// new StickyNavigation();
 
 /*---------------*/
 
 const btnBPViews = document.querySelectorAll('.btn-pink-line');
 const bpArticle = document.querySelector('.bp-article-wrap');
 const btnBpClose = document.querySelector('.btn-bp-close');
+const bpArticleMask = document.querySelector('.bp-hero-mask');
 
 btnBPViews.forEach(function(btnBPView){
   btnBPView.addEventListener('click', function(){
-    bpArticle.style.right = '0';
+    bpArticle.classList.add('active');
+		bpArticleMask.classList.add('active');
 		document.body.style.overflowY = 'hidden';
   });
 });
 
 btnBpClose.addEventListener('click', function(){
-	bpArticle.style.right = '-100%';
+	bpArticle.classList.remove('active');
+	bpArticleMask.classList.remove('active');
 	document.body.style.overflowY = 'scroll';
 });

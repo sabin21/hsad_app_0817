@@ -1,4 +1,5 @@
 /*------------------------*/
+
 .btn-normal {
   @apply min-w-[72px] lg:h-[50px] flex items-center justify-center py-2 px-7
   border border-gray-600 text-gray-800 font-bold rounded-[25px] gap-2 transition-[background];
@@ -12,6 +13,7 @@
 .btn-more-bar {
   @apply w-full flex justify-center items-center pt-20 pb-20 ;
 }
+
 .btn-pink-line{
   @apply bg-white font-bold flex justify-between items-center
   border border-pink-600 text-gray-800 
@@ -20,7 +22,20 @@
   >span{ @apply pl-[18px] text-[18px]; }
   >svg { @apply mr-[8px] ;}
 }
+
+.btn-page-top,.bp-btn-page-top {
+  @apply fixed w-14 h-14 bg-white rounded-full flex justify-center items-center
+  border border-gray-300 opacity-0 transition-opacity
+  z-[10] right-8 bottom-8 ;
+  &.active{
+    @apply opacity-100 ;
+  }
+}
+.bp-btn-page-top{
+  @apply z-[1000] ;
+}
 /*------------------------*/
+
 .full-card-wrap{
   @apply relative w-full px-4
   grid lg:grid-cols-4 gap-4 ;
@@ -170,17 +185,20 @@
 }
 
 /* CTA ---------------*/
-
-.cta-big-wrap {
-  @apply relative w-full max-w-[1450px] mx-auto bg-gray-100 
-  flex items-center justify-center px-[24px] lg:px-[100px] py-[80px]
-  my-[80px] ;
+.cta-group-wrap{
+  @apply border-b border-gray-300 ;
+}
+.cta-wrap {
+  @apply relative w-full h-full flex justify-between items-center ;
   .cta-inner {
-    @apply relative w-full flex justify-between items-center ;
+    @apply relative w-full h-full max-w-[1450px] mx-auto 
+    flex justify-between items-center ;
+    .cta-title {
+      @apply font-bold text-[64px] text-gray-800 leading-[1.2em] 
+      w-[60%] tracking-tight ;
+    }
   }
-  .cta-title {
-    @apply font-bold text-[56px] text-gray-800 leading-[1.2em] w-[60%] tracking-tight;
-  }
+  
   .cta-btn {
     @apply w-full max-w-[284px] h-[84px] flex justify-center items-center py-[20px] px-[32px] 
     overflow-hidden text-white text-[24px] font-bold rounded-[70px] grow-0 shrink-0 ;
@@ -189,3 +207,28 @@
     animation: gradient 10s ease infinite;
   }
 }
+
+.cta-contact-wrap{
+  @apply w-full bg-gray-50 border-t border-gray-300 py-10 min-h-[720px]
+  flex justify-center items-center ;
+  .dummy-img{
+    @apply w-full max-w-[1450px] ;
+  }
+}
+
+.cta-work-wrap{
+  @apply w-full bg-white border-t border-gray-300 
+  h-[420px] ;
+  .cta-work-image {
+    @apply absolute top-0 right-0;
+  }
+}
+
+.cta-capa-wrap{
+  @apply w-full bg-white border-t border-gray-300 h-[420px] ;
+  .cta-capa-image {
+    @apply absolute top-0 right-0 w-[640px];
+  }
+}
+
+/* BP 관련 ---------------*/

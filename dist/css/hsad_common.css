@@ -265,14 +265,20 @@ body{
   @apply w-full relative pt-[194px] ;
 }
 .case-header{
-  @apply absolute z-[9999] w-full h-[90px] 
-  flex flex-row gap-8 border-b border-gray-300 px-[calc(50%-725px)] 
+  @apply absolute z-[9000] w-full h-[90px] 
+  flex items-center gap-8 border-b border-gray-300 px-[calc(50%-725px)] 
   bg-[rgba(255,255,255,0.8)] backdrop-blur-lg top-[104px];
   &.active {
     @apply fixed top-0;
   }
+  >.btn-list-back{
+    @apply h-[40px] flex items-center text-gray-500 mr-4;
+    >.text{
+      @apply block pl-[8px] font-bold ;
+    }
+  }
   .case-header-item{
-    @apply relative flex items-center w-[180px] text-gray-500 transition-all duration-75
+    @apply relative flex items-center w-[180px] h-[90px] text-gray-500 transition-all duration-75
     leading-[1.2em] tracking-tight font-bold break-keep ;
     &:after{
         @apply content-[''] block absolute bottom-[-1px] w-0 h-[3px] bg-[#E826C9] 
@@ -326,12 +332,12 @@ body{
 /* dummy -------*/
 
 .contact-wrap {
-  @apply relative w-full max-w-[1202px] mx-auto ;
+  @apply relative w-full max-w-[1450px] mx-auto ;
   .contact-btns {
     @apply mt-[150px] ;
   }
   .contact-con {
-    @apply mt-[150px] mb-[150px] cursor-pointer ;
+    @apply relative mx-auto mt-[150px] mb-[150px] cursor-pointer max-w-[1202px];
   }
 }
 #pict-area{
