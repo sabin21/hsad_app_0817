@@ -496,9 +496,6 @@ video {
 .mt-24{
   margin-top: 6rem;
 }
-.mt-28{
-  margin-top: 7rem;
-}
 .mt-40{
   margin-top: 10rem;
 }
@@ -516,9 +513,6 @@ video {
 }
 .hidden{
   display: none;
-}
-.h-96{
-  height: 24rem;
 }
 .h-full{
   height: 100%;
@@ -546,10 +540,6 @@ video {
 }
 .border-r{
   border-right-width: 1px;
-}
-.bg-slate-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 .bg-white{
   --tw-bg-opacity: 1;

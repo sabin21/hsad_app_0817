@@ -334,7 +334,7 @@ body{
 .contact-wrap {
   @apply relative w-full max-w-[1450px] mx-auto ;
   .contact-btns {
-    @apply mt-[150px] ;
+    @apply mt-[32px] ;
   }
   .contact-con {
     @apply relative mx-auto mt-[150px] mb-[150px] cursor-pointer max-w-[1202px];
@@ -396,4 +396,29 @@ body{
 @keyframes headlineRevealUp {
   0%{transform: translateY(100%) ;}
   100%{transform: translateY(0%) ;}
+}
+
+/*-----------------*/
+.contact-headline {
+  @apply font-bold text-[32px] lg:text-[80px] text-center tracking-tight;
+}
+.contact-headline-sub{
+  @apply font-medium text-[32px] text-center text-gray-500 mt-24 tracking-tight;
+}
+.contact-sub-copy {
+  @apply text-center font-bold text-[40px] mt-40;
+}
+.contact-box-wrap{
+  @apply relative h-[480px] bg-red-500 w-[calc(50%+725px)] mt-20;
+  #pict-area{ @apply absolute h-full left-[calc(50%-400px)]}
+  >.title-wrap{
+    @apply absolute w-[514px] h-[480px] right-12 top-0 text-white m-0 flex flex-col;
+    h4{
+      @apply font-bold text-[56px] pt-20 tracking-tighter ;
+    }
+    .desc{ @apply text-[24px] ; }
+    .btn-pink-line {
+      @apply absolute bottom-20;
+    }
+  }
 }

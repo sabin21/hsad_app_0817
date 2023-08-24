@@ -1,0 +1,16 @@
+
+.dummy-block {
+  @apply w-full min-h-[400px] bg-slate-200 mb-10 
+  text-center flex p-10 text-[40px] overflow-hidden ;
+  &.dummy-block-1{
+    @apply h-[600px] ; 
+  }
+  &.dummy-block-2{
+    @apply h-[600px] p-0; 
+    .box-1 { @apply w-[10%] bg-slate-400 ; }
+    .box-2 { @apply w-[30%] bg-slate-600 ; }
+  }
+  &.dummy-block-3{
+    @apply h-[1400px] ; 
+  }
+}
